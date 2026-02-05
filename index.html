@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+   <html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <!--=============== FAVICON ===============-->
+      <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+      <link rel="manifest" href="assets/favicon/site.webmanifest">
+
+      <!-- preloading fonts and whatnot -->
+      <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+      <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
+      <!--<script rel="preconnect" src="https://kit.fontawesome.com/349947908d.js" crossorigin="anonymous"></script>-->
+
+      <!--=============== REMIXICONS ===============-->
+      <link rel="preload stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.4.0/remixicon.css" crossorigin="">
+
+      <!--=============== CSS ===============-->
+      <link rel="preload stylesheet" href="assets/css/styles.css">
+
+      <!-- cloudflare turnstile -->
+      <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" defer></script>
+
+      <title>Garrett Boling - Portfolio</title>
+
+      <style>
+         html {
+            visibility: hidden;
+            opacity: 0;
+         }
+      </style>
+   </head>
+   <body>
+      <!--==================== HEADER ====================-->
+      <header class="header" id="header">
+         <nav class="nav container">
+            <a href="#" class="nav__logo">
+               <span class="nav__logo-circle">G</span>
+                <span class="nav__logo-name">Garrett Boling.</span>
+            </a>
+
+            <div class="nav__menu" id="nav-menu">
+               <span class = "nav__title">Menu</span>
+
+               <h3 class="nav__name">Garrett</h3>
+
+               <ul class="nav__list">
+                  <li class="nav__item">
+                     <a href="#home" class="nav__link active-link">home.</a>
+                  </li>
+
+                  <li class="nav__item">
+                     <a href="#about" class="nav__link">about me.</a>
+                  </li>
+
+                  <li class="nav__item">
+                     <a href="#projects" class="nav__link">projects.</a>
+                  </li>
+
+                  <li class="nav__item">
+                     <a href="#contact" class="nav__link">contact me.</a>
+                  </li>
+               </ul>
+
+               <!-- close button -->
+               <div class="nav__close" id="nav-close">
+                  <i class="ri-close-line"></i>
+               </div>
+            </div>
+
+            <div class="nav__buttons">
+               <!-- theme toggle button -->
+               <i class="ri-moon-line change-theme" id="theme-button"></i>
+
+               <!-- toggle button -->
+               <div class="nav__toggle" id="nav-toggle">
+                  <i class="ri-menu-4-line"></i>
+               </div>
+            </div>
+         </nav>
+      </header>
+
+      <!--==================== MAIN ====================-->
+      <main class="main">
+         <!--==================== HOME ====================-->
+         <section class="home section" id="home">
+            <div class="home__container container grid">
+               <h1 class="home__name">
+                  Garrett Boling.
+               </h1>
+               <div class="home__perfil">
+                  <div class="home__image">
+                     <img src="assets/img/home-perfil.webp" alt="Portrait image of Garrett Boling" class="home__img">
+                     <div class="home__shadow"></div>
+
+                     <img src="assets/img/curved-arrow.svg" alt="curved arrow" class="home__arrow">
+                     <img src="assets/img/random-lines.svg" alt="random lines" class="home__line">
+
+                     <div class="geometric-box"></div>
+                  </div>
+
+                  <div class="home__social">
+                     <a href="https://www.instagram.com/garrett.boling1212" target="_blank" class="home__social-link" aria-label="Instagram">
+                        <i class="ri-instagram-line"></i>
+                     </a>
+
+                     <a href="https://www.linkedin.com/in/garrett-boling-04174b196/" target="_blank" class="home__social-link" aria-label="LinkedIn">
+                        <i class="ri-linkedin-box-line"></i>
+                     </a>
+
+                     <a href="https://github.com/smonk333" target="_blank" class="home__social-link" aria-label="GitHub">
+                        <i class="ri-github-line"></i>
+                     </a>
+                  </div>
+               </div>
+
+               <div class="home__info">
+                  <p class="home__description">
+                     <b>Backend developer</b> with experience in Python, Rust, C, and C++.
+                  </p>
+
+                  <a href="#about" class="home__scroll">
+                     <div class="home__scroll-box">
+                        <i class="ri-arrow-down-s-line"></i>
+                     </div>
+
+                     <span class="home__scroll-text">scroll down</span>
+                  </a>
+               </div>
+            </div>
+         </section>
+
+         <!--==================== ABOUT ====================-->
+         <section class="about section" id="about">
+            <div class="about__container container grid">
+               <h2 class="section__title-1">
+                  about me.
+               </h2>
+
+               <div class="about__perfil">
+                  <div class="about__image">
+                     <img src="assets/img/about-perfil.webp" alt="Profile image" class="about__img" loading="lazy">
+
+                     <div class="about__shadow"></div>
+                     <div class="geometric-box"></div>
+                     <img src="assets/img/random-lines.svg" alt="random lines" class="about__line">
+                     <div class="about__box"></div>
+                  </div>
+               </div>
+
+               <div class="about__info">
+                  <p class="about__description">
+                     I'm a recent Clemson graduate with a Bachelor's of Arts in Computer Science, and a minor in
+                     Psychology.
+                  </p>
+
+                  <h3>Some things I'm passionate about are:</h3>
+
+                  <ul class="about__list">
+                     <li class="about__item">
+                        Treatment of psychological disorders
+                     </li>
+                     <li>
+                        Data science and machine learning
+                     </li>
+                     <li>
+                        Research on the use of Psychedelics in the treatment of anxiety/depression
+                     </li>
+                  </ul>
+
+                  <div class="about__buttons">
+                     <a href="#contact" class="button">
+                        <i class="ri-send-plane-line"></i> contact me.
+                     </a>
+
+                     <a href="https://www.linkedin.com/in/garrett-boling-04174b196/" target="_blank" class="button__ghost">
+                        <i class="ri-linkedin-box-line"></i>
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </section>
+
+         <!--==================== SERVICES ====================-->
+         <section class="services section" id="services">
+            <h2 class="section__title-2">
+               <span>languages.</span>
+            </h2>
+            <div class="services__container container grid">
+               <article class="services__card">
+                  <div class="services__border"></div>
+
+                  <div class="services__content">
+                     <div class="services__icon">
+                        <div class="services__box"></div>
+                        <i class="ri-braces-line"></i>
+
+                     </div>
+
+                        <h2 class="services__title">python</h2>
+
+                        <p class="services__description">
+                           My first choice for putting together a quick project or prototype is Python. I have ~4 years
+                           of experience with it, and I have used it for everything from backend web development to
+                           data science.
+                        </p>
+                  </div>
+               </article>
+
+               <article class="services__card">
+                  <div class="services__border"></div>
+
+                  <div class="services__content">
+                     <div class="services__icon">
+                        <div class="services__box"></div>
+                        <i class="ri-code-box-line"></i>
+
+                     </div>
+
+                     <h2 class="services__title">rust</h2>
+
+                     <p class="services__description">
+                        I'm still actively learning Rust for its memory safety features, performance, and its frameworks
+                        for data science/ML and data visualization. I have a couple of projects that I'm working on
+                        porting over to Rust from Python.
+                     </p>
+                  </div>
+               </article>
+
+               <article class="services__card">
+                  <div class="services__border"></div>
+
+                  <div class="services__content">
+                     <div class="services__icon">
+                        <div class="services__box"></div>
+                        <i class="ri-terminal-line"></i>
+
+                     </div>
+
+                     <h2 class="services__title">c/c++</h2>
+
+                     <p class="services__description">
+                        I've been writing in c/c++ for ~4 years now, and both languages have given me a strong
+                        foundation in programming as a whole. It has been a great language for getting my head around
+                        the concepts of memory safety, and it was my foundation for learning Rust.
+                     </p>
+                  </div>
+               </article>
+            </div>
+         </section>
+
+         <!--==================== PROJECTS ====================-->
+         <section class="projects section" id="projects">
+            <h2 class="section__title-1">
+               <span>projects.</span>
+            </h2>
+
+            <div class="projects__container container grid">
+               <article class="projects__card">
+                  <div class="projects__image">
+                     <img src="assets/img/arrows.png" alt="project 1" class="projects__img" loading="lazy">
+                     <!--<a href="https://www.flaticon.com/free-icons/compress" title="compress icons">Compress icons created by Creatype - Flaticon</a>-->
+
+                     <a href="#" class="projects__button button">
+                        <i class="ri-arrow-right-up-line"></i>
+                     </a>
+                  </div>
+
+                  <div class="projects__content">
+                     <h3 class="projects__subtitle">a VST3 compressor plugin</h3>
+                     <h2 class="projects__title">Pressed</h2>
+
+                     <p class="projects__description">
+                        A VST3 compressor plugin that I wrote in C++ using the PampleJUCE/JUCE framework. This is my
+                        first attempt at writing a VST3 plugin.
+                     </p>
+                  </div>
+
+                  <div class="projects__buttons">
+                     <a href="" target="_blank" class="projects__link">
+                        <i class="ri-github-line"></i> view
+                     </a>
+                  </div>
+               </article>
+
+               <article class="projects__card">
+                  <div class="projects__image">
+                     <img src="assets/img/project-1.jpg" alt="project 1" class="projects__img" loading="lazy">
+
+                     <a href="#" class="projects__button button">
+                        <i class="ri-arrow-right-up-line"></i>
+                     </a>
+                  </div>
+
+                  <div class="projects__content">
+                     <h3 class="projects__subtitle">project 1</h3>
+                     <h2 class="projects__title">project 1 again</h2>
+
+                     <p class="projects__description">
+                        waffle waffle waffle
+                     </p>
+                  </div>
+
+                  <div class="projects__buttons">
+                     <a href="" target="_blank" class="projects__link">
+                        <i class="ri-github-line"></i> view
+                     </a>
+                  </div>
+               </article>
+
+               <article class="projects__card">
+                  <div class="projects__image">
+                     <img src="assets/img/project-2.jpg" alt="project 1" class="projects__img" loading="lazy">
+
+                     <a href="#" class="projects__button button">
+                        <i class="ri-arrow-right-up-line"></i>
+                     </a>
+                  </div>
+
+                  <div class="projects__content">
+                     <h3 class="projects__subtitle">project 1</h3>
+                     <h2 class="projects__title">project 1 again</h2>
+
+                     <p class="projects__description">
+                        waffle waffle waffle
+                     </p>
+                  </div>
+
+                  <div class="projects__buttons">
+                     <a href="" target="_blank" class="projects__link">
+                        <i class="ri-github-line"></i> view
+                     </a>
+                  </div>
+               </article>
+
+               <article class="projects__card">
+                  <div class="projects__image">
+                     <img src="assets/img/project-3.jpg" alt="project 1" class="projects__img" loading="lazy">
+
+                     <a href="#" class="projects__button button">
+                        <i class="ri-arrow-right-up-line"></i>
+                     </a>
+                  </div>
+
+                  <div class="projects__content">
+                     <h3 class="projects__subtitle">project 1</h3>
+                     <h2 class="projects__title">project 1 again</h2>
+
+                     <p class="projects__description">
+                        waffle waffle waffle
+                     </p>
+                  </div>
+
+                  <div class="projects__buttons">
+                     <a href="" target="_blank" class="projects__link">
+                        <i class="ri-github-line"></i> view
+                     </a>
+                  </div>
+               </article>
+
+               <article class="projects__card">
+                  <div class="projects__image">
+                     <img src="assets/img/project-1.jpg" alt="project 1" class="projects__img" loading="lazy">
+
+                     <a href="#" class="projects__button button">
+                        <i class="ri-arrow-right-up-line"></i>
+                     </a>
+                  </div>
+
+                  <div class="projects__content">
+                     <h3 class="projects__subtitle">project 1</h3>
+                     <h2 class="projects__title">project 1 again</h2>
+
+                     <p class="projects__description">
+                        waffle waffle waffle
+                     </p>
+                  </div>
+
+                  <div class="projects__buttons">
+                     <a href="" target="_blank" class="projects__link">
+                        <i class="ri-github-line"></i> view
+                     </a>
+                  </div>
+               </article>
+
+               <article class="projects__card">
+                  <div class="projects__image">
+                     <img src="assets/img/project-1.jpg" alt="project 1" class="projects__img" loading="lazy">
+
+                     <a href="#" class="projects__button button">
+                        <i class="ri-arrow-right-up-line"></i>
+                     </a>
+                  </div>
+
+                  <div class="projects__content">
+                     <h3 class="projects__subtitle">project 1</h3>
+                     <h2 class="projects__title">project 1 again</h2>
+
+                     <p class="projects__description">
+                        waffle waffle waffle
+                     </p>
+                  </div>
+
+                  <div class="projects__buttons">
+                     <a href="" target="_blank" class="projects__link">
+                        <i class="ri-github-line"></i> view
+                     </a>
+                  </div>
+               </article>
+
+               <article class="projects__card">
+                  <div class="projects__image">
+                     <img src="assets/img/project-2.jpg" alt="project 1" class="projects__img" loading="lazy">
+
+                     <a href="#" class="projects__button button">
+                        <i class="ri-arrow-right-up-line"></i>
+                     </a>
+                  </div>
+
+                  <div class="projects__content">
+                     <h3 class="projects__subtitle">project 331234124</h3>
+                     <h2 class="projects__title">project 1 again</h2>
+
+                     <p class="projects__description">
+                        waffle waffle waffle
+                     </p>
+                  </div>
+
+                  <div class="projects__buttons">
+                     <a href="" target="_blank" class="projects__link">
+                        <i class="ri-github-line"></i> view
+                     </a>
+                  </div>
+               </article>
+            </div>
+         </section>
+
+         <!--==================== CONTACT ====================-->
+         <section class="contact section" id="contact">
+            <div class="contact__container container grid">
+               <div class="contact__data">
+                  <h2 class="section__title-2">
+                     <span>contact me.</span>
+                  </h2>
+
+                  <p class="contact__description-1">
+                     I respond best to emails and instant messages.
+                  </p>
+
+                  <p class="contact__description-2">
+                     I need your <b>name</b> and <b>email address</b>. You won't
+                     receive anything other than a reply from me.
+                  </p>
+
+                  <div class="geometric-box"></div>
+               </div>
+
+               <div class="contact__mail">
+                  <h2 class="contact__title">
+                     send me a message.
+                  </h2>
+
+                  <form action="" class="contact__form" id="contact-form" method="post">
+                     <div class="contact__group">
+                        <div class="contact__box">
+                           <input type="text" name="user_name" class="contact__input" id="name" required placeholder="first name">
+                           <label for="name" class="contact__label">first name</label>
+                        </div>
+
+                        <div class="contact__box">
+                           <input type="email" name="user_email" class="contact__input" id="email" required placeholder="email address">
+                           <label for="email" class="contact__label">email address</label>
+                        </div>
+                     </div>
+
+                     <div class="contact__box">
+                        <input type="text" name="user_subject" class="contact__input" id="subject" required placeholder="subject">
+                        <label for="subject" class="contact__label">subject</label>
+                     </div>
+
+                     <div class="contact__box contact__area">
+                        <textarea name="user_message" id="user_message" class="contact__input" required placeholder="message"></textarea>
+                        <label for="user_message" class="contact__label">message</label>
+                     </div>
+
+                     <p class="contact__message" id="contact-message"></p>
+
+                     <div class="cf-turnstile" data-sitekey="0x4AAAAAABCen9yCPNauv_yu"></div>
+                     <button type="submit" class="contact__button button">
+                        <i class="ri-send-plane-line"></i> send message.
+                     </button>
+                  </form>
+               </div>
+
+               <div class="contact__social">
+                  <img src="assets/img/curved-arrow.svg" alt="arrow" class="contact__social-arrow">
+
+                  <div class="contact__social-data">
+                     <div>
+                        <p class="contact__social-description-1">
+                           prefer instant messaging?
+                        </p>
+
+                        <p class="contact__social-description-2">
+                           contact me via social media
+                        </p>
+                     </div>
+
+                     <div class="contact__social-links">
+                        <a href="https://wa.me/18642079092" target="_blank" class="contact__social-link" aria-label="Telegram">
+                           <i class="ri-whatsapp-line"></i>
+                        </a>
+
+                        <a href="https://t.me/gboling02" target="_blank" class="contact__social-link" aria-label="WhatsApp">
+                           <i class="ri-telegram-line"></i>
+                        </a>
+
+                        <a href="https://m.me/garrett.boling1212" target="_blank" class="contact__social-link" aria-label="Facebook Messenger">
+                           <i class="ri-messenger-line"></i>
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/garrett-boling-04174b196/" target="_blank" class="contact__social-link" aria-label="LinkedIn">
+                           <i class="ri-linkedin-box-line"></i>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+      </main>
+      <!--==================== FOOTER ====================-->
+      <footer class="footer">
+         <div class="footer__container container grid">
+            <ul class="footer__links">
+               <li>
+                  <a href="#about" class="footer__link">about</a>
+               </li>
+
+               <li>
+                  <a href="#services" class="footer__link">services</a>
+               </li>
+
+               <li>
+                  <a href="#projects" class="footer__link">projects</a>
+               </li>
+            </ul>
+
+            <span class="footer__copy">
+               &#169; All Rights Reserved
+               <a href="https://gboling.dev/">Garrett Boling,</a>
+               Website template designed by <a href="https://www.youtube.com/c/Bedimcode">Bedimcode</a>
+            </span>
+         </div>
+      </footer>
+
+      <!--========== SCROLL UP ==========-->
+      <a href="#" class="scrollup" id="scroll-up">
+         <i class="ri-arrow-up-s-line"></i>
+      </a>
+
+      <!--=============== SCROLLREVEAL ===============-->
+      <script src="/assets/js/scrollreveal.min.js"></script>
+      
+
+      <!--=============== MAIN JS ===============-->
+      <script src="assets/js/main.js"></script>
+
+      <script>
+         window.addEventListener('load', () => {
+            setTimeout(() => {
+               document.documentElement.style.visibility = 'visible';
+               document.documentElement.style.opacity = '1';
+            }, 100)
+         });
+      </script>
+      <noscript>
+         <style>
+            html {
+               visibility: visible;
+               opacity: 1;
+            }
+         </style>
+         <p>Please enable JavaScript to view this website.</p>
+      </noscript>
+   </body>
+</html>

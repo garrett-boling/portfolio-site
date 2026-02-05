@@ -116,6 +116,59 @@ img {
   transition: color .3s;
 }
 
+/*=============== TERMINAL BANNER ==============*/
+.terminal-banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background: #071024; /* dark background */
+    color: #dbeafe;      /* light text */
+    font-family: 'Fira Code', monospace;
+    font-size: 14px;
+    padding: 0 12px;
+    z-index: 9999;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.35);
+}
+
+/* track holds two repeated messages for continuous scroll */
+.terminal-banner__track {
+    display: inline-flex;
+    gap: 2.5rem;
+    white-space: nowrap;
+    will-change: transform;
+    animation: terminal-scroll 22s linear infinite;
+    align-items: center;
+}
+
+/* each message styling */
+.terminal-banner__msg {
+    display: inline-block;
+    padding-right: 1rem;
+}
+
+/* pause animation when user hovers (helpful for copy/reading) */
+.terminal-banner:hover .terminal-banner__track,
+.terminal-banner:focus-within .terminal-banner__track {
+    animation-play-state: paused;
+}
+
+/* keyframes: scroll the track left continuously */
+@keyframes terminal-scroll {
+    0%   { transform: translateX(0%); }
+    100% { transform: translateX(-50%); }
+}
+
+/* small-screen tweaks so banner doesn't overwhelm UI */
+@media (max-width: 520px) {
+    .terminal-banner { font-size: 13px; height: 40px; padding: 0 8px; }
+    .terminal-banner__track { gap: 1.5rem; animation-duration: 18s; }
+}
+
 /*========== Variables Dark theme ==========*/
 body.dark-theme {
   --first-color: hsl(14, 80%, 50%);

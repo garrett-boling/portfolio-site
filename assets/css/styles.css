@@ -136,30 +136,57 @@ img {
     color: #dbeafe; /* light text */
     font-family: 'Fira Code', monospace;
     font-size: 14px;
-    padding: 0 12px;
+    padding: 0;
     z-index: 2;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
 }
 
 .terminal-banner__track {
-    display: inline-flex;
-    gap: 0;
+    display: flex;
+    width: max-content;
     white-space: nowrap;
     will-change: transform;
-    animation: terminal-scroll 50s linear infinite;
+    animation: terminal-scroll 25s linear infinite;
     align-items: center;
 }
 
-.terminal-banner__msg {
+.terminal-banner__group {
     flex: 0 0 auto;
-    display: inline-block;
-    padding-right: 8rem;
+    min-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 1rem;
+    gap: 0 0.75rem;
+}
+
+.terminal-banner__item {
+    display: inline-flex;
+    align-items: center;
+    color: #e2e8f0;
+    font-size: .85rem;
+    background-color: #152c41;
+    padding: .45rem .8rem;
+    border-radius: .4rem;
+    white-space: nowrap;
+}
+
+.terminal-banner__fade {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(90deg, #071024, transparent 14%, transparent 86%, #071024);
 }
 
 /* pause animation when user hovers (copy/reading) */
 .terminal-banner:hover .terminal-banner__track,
 .terminal-banner:focus-within .terminal-banner__track {
     animation-play-state: paused;
+}
+
+.terminal-banner:hover .terminal-banner__fade,
+.terminal-banner:focus-within .terminal-banner__fade {
+    background: linear-gradient(90deg, #071024, transparent 20%, transparent 80%, #071024);
 }
 
 /* keyframes: scroll the track left continuously */
@@ -170,9 +197,10 @@ img {
 
 /* small-screen tweaks so banner doesn't overwhelm UI */
 @media (max-width: 520px) {
-    .terminal-banner { font-size: 13px; height: 40px; padding: 0 8px; }
-    .terminal-banner__msg { padding-right: 1.5rem; }
-    .terminal-banner__track { animation-duration: 18s; }
+    .terminal-banner { font-size: 13px; height: 40px; }
+    .terminal-banner__group { gap: 0 .5rem; padding: 0 .5rem; }
+    .terminal-banner__item { font-size: .78rem; padding: .35rem .65rem; }
+    .terminal-banner__track { animation-duration: 20s; }
 }
 
 .header{

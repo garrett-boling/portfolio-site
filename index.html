@@ -22,7 +22,8 @@
       <link rel="preload stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.4.0/remixicon.css" crossorigin="">
 
       <!--=============== CSS ===============-->
-      <link rel="preload stylesheet" href="assets/css/styles.css">
+       <link rel="preload" href="assets/css/styles.css" as="style" onload="this.rel='stylesheet'">
+       <noscript><link rel="stylesheet" href="assets/css/styles.css"></noscript>
 
       <!-- cloudflare turnstile -->
       <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" defer></script>

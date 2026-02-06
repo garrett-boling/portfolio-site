@@ -146,7 +146,7 @@ img {
     width: max-content;
     white-space: nowrap;
     will-change: transform;
-    animation: terminal-scroll 25s linear infinite;
+    animation: terminal-scroll 30s linear infinite;
     align-items: center;
 }
 
@@ -201,7 +201,7 @@ img {
 /* keyframes: scroll the track left continuously */
 @keyframes terminal-scroll {
     0%   { transform: translateX(0%); }
-    100% { transform: translateX(-50%); }
+    100% { transform: translateX(-100%); }
 }
 
 /* small-screen tweaks so banner doesn't overwhelm UI */

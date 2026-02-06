@@ -171,6 +171,15 @@ img {
     white-space: nowrap;
 }
 
+.terminal-banner__cmd {
+    color: #08ff00; /* command color */
+    background: rgba(255,255,255,0.04);
+    padding: 0.08rem 0.35rem;
+    border-radius: 0.25rem;
+    font-family: 'Fira Code', monospace;
+    font-weight: 600;
+}
+
 .terminal-banner__fade {
     position: absolute;
     inset: 0;
